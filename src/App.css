@@ -1,0 +1,287 @@
+.app-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.echarts-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  min-height: calc(100vh - 140px);
+}
+
+.left-panel {
+  flex: 1;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #f0f0f0;
+  padding-right: 20px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.chart-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* 设置表格最大高度 */
+.ant-table-wrapper {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.ant-table {
+  background: #fff;
+}
+
+/* 确保表格在左侧面板中正确显示 */
+.left-panel .ant-table-wrapper {
+  height: 100%;
+}
+
+.left-panel .ant-table-wrapper .ant-spin-nested-loading {
+  height: 100%;
+}
+
+.left-panel .ant-table-wrapper .ant-spin-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-panel .ant-table-wrapper .ant-table {
+  flex: 1;
+  overflow: hidden;
+}
+
+.left-panel .ant-table-wrapper .ant-table-container {
+  height: 100%;
+}
+
+.left-panel .ant-table-wrapper .ant-table-body {
+  height: calc(100vh - 300px) !important;
+}
+
+.nav-menu {
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stacked-chart-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 确保图表容器能够正确扩展 */
+.stacked-chart-container .echarts-for-react {
+  flex: 1;
+  min-height: 0;
+}
+
+.phylogenetic-tree-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.phylogenetic-tree-container .echarts-for-react {
+  flex: 1;
+  min-height: 0;
+}
+
+.tree-tooltip {
+  transition: all 0.1s ease;
+  line-height: 1.5;
+  color: #333;
+  border: 1px solid #e8e8e8;
+}
+
+.tree-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.dashboard-container {
+  padding: 16px;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.dashboard-card {
+  height: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card .ant-card-head {
+  padding: 0 16px;
+  min-height: 48px;
+  font-size: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dashboard-card .ant-card-body {
+  overflow: auto;
+}
+
+/* 调整各组件在 dashboard 中的样式 */
+.dashboard-card .echarts-container,
+.dashboard-card .stacked-chart-container,
+.dashboard-card .phylogenetic-tree-container {
+  padding: 0;
+  height: 100%;
+  box-shadow: none;
+  background: none;
+}
+
+.dashboard-card .chart-header {
+  padding: 0 0 16px 0;
+}
+
+/* 确保图表容器能够正确扩展 */
+.dashboard-card .echarts-for-react,
+.dashboard-card svg {
+  height: calc(100% - 48px) !important;
+}
+
+/* 调整表格区域的高度 */
+.dashboard-card .ant-table-wrapper .ant-table-body {
+  height: calc(100vh - 420px) !important;
+}
+
+/* Dashboard 特定样式 */
+.table-only-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-only-wrapper .table-controls {
+  margin-bottom: 12px;
+}
+
+.chart-only-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chart-only-wrapper .chart-header {
+  margin-bottom: 12px;
+  flex-shrink: 0;
+  padding: 0 16px;
+}
+
+.dashboard-card.table-card .ant-table-wrapper .ant-table-body {
+  height: calc(100% - 100px) !important;
+}
+
+/* 调整 Dashboard 中的组件间距和大小 */
+.dashboard-container .ant-row {
+  margin: -8px;
+}
+
+.dashboard-container .ant-col {
+  padding: 8px;
+}
+
+.dashboard-card {
+  margin-bottom: 0;
+}
+
+/* 添加新的样式确保图表容器正确显示 */
+.chart-only-wrapper .echarts-for-react {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-only-wrapper .echarts-for-react > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.pca-scatter-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pca-scatter-wrapper .chart-header {
+  flex-shrink: 0;
+  padding: 0 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 确保图表容器保持正方形 */
+.pca-scatter-wrapper .echarts-for-react {
+  aspect-ratio: 1;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.pca-scatter-wrapper .echarts-for-react > div {
+  width: 100% !important;
+  height: 100% !important;
+} 
